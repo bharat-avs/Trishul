@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/app_logo.jpeg" alt="Project Trishul Logo" width="160" />
+<img src="Assets/app_logo.jpeg" alt="Project Trishul Logo" width="160" />
 
 # PROJECT TRISHUL
 ### Tactical Air-Gapped C2 & Anti-Tamper Mesh Communication Framework
@@ -26,7 +26,7 @@ The architecture decouples the primary human interface (Android EUD) from the RF
 ## Cryptography & Architecture Flow
 
 <div align="center">
-  <img src="assets/pki_hybrid_encryption_flow.png" alt="PKI Hybrid Encryption Flow" width="800" />
+  <img src="Assets/pki_hybrid_encryption_flow.png" alt="PKI Hybrid Encryption Flow" width="800" />
 </div>
 
 ### Security Specifications
@@ -43,17 +43,17 @@ The architecture decouples the primary human interface (Android EUD) from the RF
 
 | Secure Boot | MFA Authentication | Hardware Scanning |
 | :---: | :---: | :---: |
-| <img src="assets/boot.jpeg" width="220"/> | <img src="assets/mfa.jpeg" width="220"/> | <img src="assets/scanning.jpeg" width="220"/> |
+| <img src="Assets/boot.jpeg" width="220"/> | <img src="Assets/mfa.jpeg" width="220"/> | <img src="Assets/scanning.jpeg" width="220"/> |
 | **Boot Sequence** | **Biometric / RFID Challenge** | **Hunting MAC Uplink** |
 
 | C2 Dashboard | Secure Messaging | Audit Vault |
 | :---: | :---: | :---: |
-| <img src="assets/dashboard.jpeg" width="220"/> | <img src="assets/message.jpeg" width="220"/> | <img src="assets/TEE_Audit_Vault.jpeg" width="220"/> |
+| <img src="Assets/dashboard.jpeg" width="220"/> | <img src="Assets/message.jpeg" width="220"/> | <img src="Assets/TEE_Audit_Vault.jpeg" width="220"/> |
 | **Telemetry & Threat Status** | **Off-Grid Mesh Comms** | **TEE Encrypted Logs** |
 
 | Navigation | Link Lost | Zeroize Protocol |
 | :---: | :---: | :---: |
-| <img src="assets/menu.jpeg" width="220"/> | <img src="assets/no_connectivity.jpeg" width="220"/> | <img src="assets/zeroization.jpeg" width="220"/> |
+| <img src="Assets/menu.jpeg" width="220"/> | <img src="Assets/no_connectivity.jpeg" width="220"/> | <img src="Assets/zeroization.jpeg" width="220"/> |
 | **App Drawer** | **Air-Gap Broken** | **RAM Purged / Keys Wiped** |
 
 ---
