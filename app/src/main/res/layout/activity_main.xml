@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tactical_bg"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HEADER ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/btn_hamburger"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:text="≡"
+                    android:textColor="@color/neon_green"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROJECT TRISHUL"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TACTICAL NODE B // C2 EUD"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.1"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_zeroize_quick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_tamper_btn"
+                    android:text="KILL SWITCH"
+                    android:textColor="@color/threat_red"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="10dp"/>
+            </LinearLayout>
+
+            <!-- 3D WIREFRAME GLOBE & RADAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_hero_card"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SATELLITE &amp; MESH SURVEILLANCE"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp"
+                        android:fontFamily="monospace"/>
+                    <TextView
+                        android:id="@+id/tv_radar_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="SWEEP: 433MHz ACTIVE"
+                        android:textColor="@color/neon_green"
+                        android:textSize="10sp"
+                        android:fontFamily="monospace"/>
+                </RelativeLayout>
+
+                <com.example.trishul.TacticalGlobeView
+                    android:id="@+id/tactical_globe_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <!-- MESH LINK STATUS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_connectivity_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MESH LINK POSTURE"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_system_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AIR-GAPPED // ARMED"
+                        android:textColor="@color/neon_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_scan_ble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_blue"
+                    android:text="SCAN BLE"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+
+            <!-- LIVE DHT22 SENSOR WAVEFORM GRAPH -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_telemetry_card"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginTop="14dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DHT22 TELEMETRY TRACE"
+                        android:textColor="@color/neon_cyan"
+                        android:textSize="10sp"
+                        android:fontFamily="monospace"/>
+                    <TextView
+                        android:id="@+id/tv_env_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="24.2 °C"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"/>
+                </RelativeLayout>
+
+                <com.example.trishul.LiveGraphView
+                    android:id="@+id/live_graph_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- SECURE COMMS LINK (NODE A -> NODE B) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SECURE COMMS LINK (AES-128)"
+                android:textColor="@color/neon_green"
+                android:textSize="11sp"
+                android:letterSpacing="0.1"
+                android:fontFamily="monospace"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_chat_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_telemetry_card"
+                    android:hint="Type directive (or REVOKE_TOKEN)..."
+                    android:textColorHint="@color/text_muted"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="12dp"
+                    android:fontFamily="monospace"
+                    android:inputType="text"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_send_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_btn_green"
+                    android:text="TX"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- AUDIT TERMINAL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="THREAT AUDIT STREAM [TEE ENCRYPTED]"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:letterSpacing="0.1"
+                android:fontFamily="monospace"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_telemetry_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_terminal_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:padding="10dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="10.5sp"
+                    android:lineSpacingExtra="3dp"
+                    android:fontFamily="monospace"
+                    android:scrollbars="vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FIPS 140-3 Hardware Key Sanitization Active."
+                android:textColor="@color/text_muted"
+                android:textSize="9sp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#0B1118"
+        app:itemTextColor="@color/text_primary"
+        app:itemIconTint="@color/neon_cyan"
+        app:menu="@menu/menu_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

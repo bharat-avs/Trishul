@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Silicon Labs CP210x (Standard ESP32 chip) -->
+    <usb-device vendor-id="4292" product-id="60000" />
+
+    <!-- CH340 (Common ESP32/NodeMCU clone chip) -->
+    <usb-device vendor-id="6790" product-id="29987" />
+
+    <!-- FTDI (Alternative serial chips) -->
+    <usb-device vendor-id="1027" product-id="24577" />
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_simulate_rfid"
+        android:icon="@android:drawable/ic_lock_lock"
+        android:title="CHALLENGE TOKEN (MFA DEMO)" />
+    <item
+        android:id="@+id/nav_logs"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="HARDWARE TEE LOG VAULT" />
+    <item
+        android:id="@+id/nav_simulate_breach"
+        android:icon="@android:drawable/stat_notify_error"
+        android:title="TRIGGER ENCLOSURE TAMPER" />
+    <item
+        android:id="@+id/nav_zeroize"
+        android:icon="@android:drawable/ic_delete"
+        android:title="EMERGENCY KEY ZEROIZATION" />
+</menu>

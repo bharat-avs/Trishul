@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Tactical Dark Mode Palette -->
+    <color name="tactical_bg">#06080C</color>
+    <color name="tactical_card_bg">#0B1118</color>
+    <color name="neon_green">#00E676</color>
+    <color name="neon_cyan">#00E5FF</color>
+    <color name="threat_red">#FF1744</color>
+    <color name="threat_red_bg">#1A0408</color>
+
+    <!-- Typography & Borders -->
+    <color name="text_primary">#E0F7FA</color>
+    <color name="text_muted">#4D6678</color>
+    <color name="border_subtle">#1A2C3D</color>
+    <color name="card_stroke">#1A2C3D</color>
+    <color name="btn_blue">#3AB0FF</color>
+    <color name="btn_green">#2ECC71</color>
+    <color name="connectivity_bg">#161E2D</color><!-- Required by your bg_tactical_card.xml -->
+</resources>

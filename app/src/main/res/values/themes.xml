@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The parent MUST be an AppCompat or MaterialComponents theme -->
+    <style name="Theme.Trishul" parent="Theme.AppCompat.NoActionBar">
+        <!-- We use NoActionBar because you built a custom tactical header in the XML -->
+        <item name="android:windowBackground">@color/tactical_bg</item>
+        <item name="android:statusBarColor">@color/tactical_bg</item>
+    </style>
+</resources>
